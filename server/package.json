@@ -6,7 +6,7 @@
     "dev": "ts-node index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "seed": "ts-node seed-database.ts"
+    "seed": "node --max-old-space-size=8192 --optimize-for-size --gc-interval=100 -r ts-node/register seed-database.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,15 +20,16 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@langchain/core": "^0.3.72",
-    "@langchain/google-genai": "^0.2.16",
-    "@langchain/langgraph": "^0.4.6",
-    "@langchain/langgraph-checkpoint-mongodb": "^0.1.0",
+    "@langchain/core": "^0.3.59",
+    "@langchain/google-genai": "^0.2.12",
+    "@langchain/langgraph": "^0.3.4",
+    "@langchain/langgraph-checkpoint-mongodb": "^0.0.6",
     "@langchain/mongodb": "^0.1.0",
+    "@langchain/openai": "^0.5.13",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "langchain": "^0.3.31",
+    "langchain": "^0.2.17",
     "mongodb": "^6.18.0",
     "mongoose": "^8.17.2",
     "zod": "^3.25.76"
