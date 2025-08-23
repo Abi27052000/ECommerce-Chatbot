@@ -16,17 +16,12 @@
     "sourceMap": true
   },
   "ts-node": {
+    "transpileOnly": true,
     "esm": false,
     "compilerOptions": {
       "module": "CommonJS"
     }
   },
-  "include": [
-    "*.ts",
-    "**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["*.ts", "**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
